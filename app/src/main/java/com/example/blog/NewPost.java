@@ -12,6 +12,9 @@ import android.widget.EditText;
 import android.widget.NumberPicker;
 import android.widget.Toast;
 
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
 public class NewPost extends AppCompatActivity {
     private EditText editTextTitle;
     private EditText editTextInhoud;
@@ -57,6 +60,12 @@ public class NewPost extends AppCompatActivity {
             Toast.makeText(this, "Please fill in a title and content", Toast.LENGTH_SHORT).show();
             return;
         }
+
+        CollectionReference notebookRef = FirebaseFirestore.getInstance()
+                .collection("Notebook");
+        notebookRef.add(new Post(title, inhoud, datum));
+        Toast.makeText(this, "Blog posted!", Toast.LENGTH_SHORT).show();
+        finish();
     }
 
 }
