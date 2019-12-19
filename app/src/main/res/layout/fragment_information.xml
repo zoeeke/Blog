@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/colorAccent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Information"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello. Welcome to your blog! If your look to the top left,
+you'll see the menu button. Here you can chose to go to your home page, to search posts
+or to make a new post. Every post has a title, description and a priority. You can
+chose these yourself. However beware that once your post is posted on het main page,
+you can not delete it! You can also not delete other peoples posts. So enjoy your blog
+and keep posting daily!"
+        android:textSize="15sp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"/>
+
+</RelativeLayout>

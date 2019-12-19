@@ -64,6 +64,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Intent i = new Intent(MainActivity.this, NewPost.class);
                 startActivity(i);
                 break;
+            case R.id.nav_info:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new fragment_information()).commit();
+                break;
         }
 
         drawer.closeDrawer(GravityCompat.START);
