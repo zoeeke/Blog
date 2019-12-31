@@ -9,16 +9,17 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.NumberPicker;
 import android.widget.Toast;
 
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.text.SimpleDateFormat;
+
 public class NewPost extends AppCompatActivity {
     private EditText editTextTitle;
     private EditText editTextInhoud;
-    private NumberPicker numberPicker;
+    private DatePicker datePicker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +28,7 @@ public class NewPost extends AppCompatActivity {
 
         editTextTitle = findViewById(R.id.edit_title);
         editTextInhoud = findViewById(R.id.edit_inhoud);
-        numberPicker = findViewById(R.id.number_picker);
-
-        numberPicker.setMinValue(1);
-        numberPicker.setMaxValue(10);
+        datePicker = findViewById(R.id.date_picker);
     }
 
     @Override
@@ -54,7 +52,8 @@ public class NewPost extends AppCompatActivity {
     private void saveNote() {
         String title = editTextTitle.getText().toString();
         String inhoud = editTextInhoud.getText().toString();
-        int prio = numberPicker.getValue();
+        SimpleDateFormat datum = new SimpleDateFormat("31/12/2019");
+        //SimpleDateFormat datum = datePicker.get
 
         if (title.trim().isEmpty() || inhoud.trim().isEmpty()) {
             Toast.makeText(this, "Please fill in a title and content", Toast.LENGTH_SHORT).show();
@@ -63,7 +62,7 @@ public class NewPost extends AppCompatActivity {
 
         CollectionReference notebookRef = FirebaseFirestore.getInstance()
                 .collection("Notebook");
-        notebookRef.add(new Post(title, inhoud, prio));
+        notebookRef.add(new Post(title, inhoud, datum));
         Toast.makeText(this, "Blog posted!", Toast.LENGTH_SHORT).show();
         finish();
     }
