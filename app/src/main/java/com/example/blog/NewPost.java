@@ -54,7 +54,7 @@ public class NewPost extends AppCompatActivity {
     private void saveNote() {
         String title = editTextTitle.getText().toString();
         String inhoud = editTextInhoud.getText().toString();
-        int datum = numberPicker.getValue();
+        int prio = numberPicker.getValue();
 
         if (title.trim().isEmpty() || inhoud.trim().isEmpty()) {
             Toast.makeText(this, "Please fill in a title and content", Toast.LENGTH_SHORT).show();
@@ -63,7 +63,7 @@ public class NewPost extends AppCompatActivity {
 
         CollectionReference notebookRef = FirebaseFirestore.getInstance()
                 .collection("Notebook");
-        notebookRef.add(new Post(title, inhoud, datum));
+        notebookRef.add(new Post(title, inhoud, prio));
         Toast.makeText(this, "Blog posted!", Toast.LENGTH_SHORT).show();
         finish();
     }

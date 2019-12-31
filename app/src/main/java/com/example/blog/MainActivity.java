@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     private void setUpRecyclerView() {
-        Query query = notebookref.orderBy("datum", Query.Direction.DESCENDING);
+        Query query = notebookref.orderBy("prio", Query.Direction.DESCENDING);
 
         FirestoreRecyclerOptions<Post> options = new FirestoreRecyclerOptions.Builder<Post>()
                 .setQuery(query, Post.class)

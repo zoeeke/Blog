@@ -3,20 +3,20 @@ package com.example.blog;
 public class Post {
     private String title;
     private String inhoud;
-    private int datum;
+    private int prio;
 
     public Post() {
         //is nodig...
     }
 
-    public Post(String title, String inhoud, int datum) {
+    public Post(String title, String inhoud, int prio) {
         this.title = title;
         this.inhoud = inhoud;
-        this.datum = datum;
+        this.prio = prio;
     }
 
-    public int getDatum() {
-        return datum;
+    public int getPrio() {
+        return prio;
     }
 
     public String getTitle() {
