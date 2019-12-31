@@ -48,8 +48,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
 
         if (savedInstanceState == null) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.linear_layout,
-                new fragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                new fragment_list_post()).commit();
         navigationView.setCheckedItem(R.id.nav_home);}
     }
 
@@ -57,8 +57,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()) {
             case R.id.nav_home:
-                getSupportFragmentManager().beginTransaction().replace(R.id.linear_layout,
-                        new fragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new fragment_list_post()).commit();
                 break;
             case R.id.nav_post:
                 Intent i = new Intent(MainActivity.this, NewPost.class);
