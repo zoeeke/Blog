@@ -15,6 +15,8 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 public class NewPost extends AppCompatActivity {
     private EditText editTextTitle;
@@ -52,8 +54,9 @@ public class NewPost extends AppCompatActivity {
     private void saveNote() {
         String title = editTextTitle.getText().toString();
         String inhoud = editTextInhoud.getText().toString();
-        SimpleDateFormat datum = new SimpleDateFormat("31/12/2019");
-        //SimpleDateFormat datum = datePicker.get
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(datePicker.getYear(),datePicker.getMonth(),datePicker.getDayOfMonth());
+        Date datum = calendar.getTime();
 
         if (title.trim().isEmpty() || inhoud.trim().isEmpty()) {
             Toast.makeText(this, "Please fill in a title and content", Toast.LENGTH_SHORT).show();

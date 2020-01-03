@@ -1,23 +1,24 @@
 package com.example.blog;
 
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Post {
     private String title;
     private String inhoud;
-    private SimpleDateFormat datum;
+    private Date datum;
 
     public Post() {
         //is nodig...
     }
 
-    public Post(String title, String inhoud, SimpleDateFormat datum) {
+    public Post(String title, String inhoud, Date datum) {
         this.title = title;
         this.inhoud = inhoud;
         this.datum = datum;
     }
 
-    public SimpleDateFormat getDatum() {
+    public Date getDatum() {
         return datum;
     }
 
