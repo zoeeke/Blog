@@ -28,6 +28,9 @@ public class NewPost extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_post);
 
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.delete);
+        setTitle("Add post");
+
         editTextTitle = findViewById(R.id.edit_title);
         editTextInhoud = findViewById(R.id.edit_inhoud);
         datePicker = findViewById(R.id.date_picker);
