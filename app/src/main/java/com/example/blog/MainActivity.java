@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if (savedInstanceState == null) {
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                new fragment_list_post()).commit();
+                new FragmentListPost()).commit();
         navigationView.setCheckedItem(R.id.nav_home);}
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (menuItem.getItemId()) {
             case R.id.nav_home:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new fragment_list_post()).commit();
+                        new FragmentListPost()).commit();
                 break;
             case R.id.nav_post:
                 Intent i = new Intent(MainActivity.this, NewPost.class);
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.nav_info:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new fragment_information()).commit();
+                        new FragmentInformation()).commit();
                 break;
         }
 
@@ -88,10 +88,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                     switch (menuItem.getItemId()) {
                         case R.id.home:
-                            selectedFragment = new fragment_list_post();
+                            selectedFragment = new FragmentListPost();
                             break;
                         case R.id.topics:
-                            selectedFragment = new fragment_topics();
+                            selectedFragment = new FragmentTopics();
                             break;
                     }
 

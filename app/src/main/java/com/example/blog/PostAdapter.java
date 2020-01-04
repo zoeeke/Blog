@@ -15,7 +15,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
 public class PostAdapter extends FirestoreRecyclerAdapter <Post, PostAdapter.PostHolder> {
-    private DateFormat dateFormat = new SimpleDateFormat("dd/mm/yyyy");
+    private DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 
     public PostAdapter(@NonNull FirestoreRecyclerOptions<Post> options) {
         super(options);
