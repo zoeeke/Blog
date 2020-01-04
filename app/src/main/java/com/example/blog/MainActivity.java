@@ -53,10 +53,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 new FragmentListPost()).commit();
         navigationView.setCheckedItem(R.id.nav_home);}
-
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
-        bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
-
     }
 
     @Override
@@ -79,28 +75,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
-    private BottomNavigationView.OnNavigationItemSelectedListener navListener =
-            new BottomNavigationView.OnNavigationItemSelectedListener() {
-                @Override
-                public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                    Fragment selectedFragment = null;
-
-                    switch (menuItem.getItemId()) {
-                        case R.id.home:
-                            selectedFragment = new FragmentListPost();
-                            break;
-                        case R.id.topics:
-                            selectedFragment = new FragmentTopics();
-                            break;
-                    }
-
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                            selectedFragment).commit();
-
-                    return true;
-                }
-            };
 
     @Override
     public void onBackPressed() {
