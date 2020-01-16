@@ -15,7 +15,6 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -69,6 +68,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_info:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new FragmentInformation()).commit();
+                break;
+            case R.id.nav_search:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new FragmentSearch()).commit();
                 break;
         }
 
