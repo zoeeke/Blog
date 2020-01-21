@@ -13,15 +13,17 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello. Welcome to your blog! If your look to the top left,
-you'll see the menu button. Here you can chose to go to your home page, to search posts
+        android:text="Hello. Welcome to your blog!
+        \n\nIf your look to the top left, you'll see the menu button. Here you can chose to go to your home page, to search posts
 or to make a new post. Every post has a title, description and a date. You can
-chose these yourself. However beware that once your post is posted on het main page,
-you can not delete it nor edit it! You can also not delete or edit other peoples posts. Every
-post you make is anonymous. If you like, you could put you name under the post. So enjoy your blog
+chose these yourself.
+\nHowever beware that once your post is posted on het main page,
+you can not delete it nor edit it! You can also not delete or edit other peoples posts.
+\nEvery post you make is anonymous. If you like, you could put you name under the post.
+\nSo enjoy your blog
 and keep posting daily!"
         android:textSize="20sp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="60dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"/>
 
