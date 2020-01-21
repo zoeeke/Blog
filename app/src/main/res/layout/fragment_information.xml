@@ -8,13 +8,14 @@
         android:layout_height="wrap_content"
         android:text="Information"
         android:textSize="30sp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello. Welcome to your blog!
-        \n\nIf your look to the top left, you'll see the menu button. Here you can chose to go to your home page, to search posts
+        \nIf your look to the top left, you'll see the menu button. Here you can chose to go to your home page, to search posts
 or to make a new post. Every post has a title, description and a date. You can
 chose these yourself.
 \nHowever beware that once your post is posted on het main page,
@@ -26,5 +27,12 @@ and keep posting daily!"
         android:layout_marginTop="60dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"/>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/typing"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="100dp"/>
 
 </RelativeLayout>
